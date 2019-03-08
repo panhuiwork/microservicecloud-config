@@ -19,7 +19,7 @@ feign:
 server:
   port: 8001 
 spring:
-  profiles: dept-8001
+  profiles: dept8001
   application:
     name: microservicecloud-dept
   datasource:
@@ -46,7 +46,7 @@ eureka:
 server:
   port: 8002 
 spring:
-  profiles: dept-8002
+  profiles: dept8002
   application:
     name: microservicecloud-dept
   datasource:
@@ -73,7 +73,7 @@ eureka:
 server:
   port: 8003 
 spring:
-  profiles: dept-8003
+  profiles: dept8003
   application:
     name: microservicecloud-dept
   datasource:
@@ -98,7 +98,7 @@ eureka:
     prefer-ip-address: true
 ---
 spring:
-  profiles: euraka-7001
+  profiles: euraka7001
 server: 
   port: 7001
 eureka: 
@@ -111,7 +111,7 @@ eureka:
     defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
 ---
 spring:
-  profiles: euraka-7002
+  profiles: euraka7002
 server: 
   port: 7002
 eureka: 
@@ -124,7 +124,7 @@ eureka:
     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/
 ---
 spring:
-  profiles: euraka-7003
+  profiles: euraka7003
 server: 
   port: 7003
 eureka: 
