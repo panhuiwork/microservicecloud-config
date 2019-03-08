@@ -52,7 +52,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #当前数据源操作类
     driver-class-name: com.mysql.jdbc.Driver  #mysql去  com.mysql.jdbc.Driver  org.git.mm.mysql.Driver   新版本com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatis01?useUnicode=true&characterEncoding=utf8&useSSL=false  #数据库名称
+    url: jdbc:mysql://localhost:3306/mybatis02?useUnicode=true&characterEncoding=utf8&useSSL=false  #数据库名称
     username: root
     password: 
     dbcp2:
@@ -79,7 +79,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #当前数据源操作类
     driver-class-name: com.mysql.jdbc.Driver  #mysql去  com.mysql.jdbc.Driver  org.git.mm.mysql.Driver   新版本com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatis01?useUnicode=true&characterEncoding=utf8&useSSL=false  #数据库名称
+    url: jdbc:mysql://localhost:3306/mybatis03?useUnicode=true&characterEncoding=utf8&useSSL=false  #数据库名称
     username: root
     password: 
     dbcp2:
