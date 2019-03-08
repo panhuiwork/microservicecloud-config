@@ -9,28 +9,30 @@ spring:
   profiles: feign
 eureka:
   client:
-    register-with-eureka: false #²»×¢²á×Ô¼º
+    register-with-eureka: false #ä¸æ³¨å†Œè‡ªå·±
     service-url:
        defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka
 feign:
   hystrix:
     enabled: true
 ---
+server:
+  port: 8001 
 spring:
   profiles: dept-8001
   application:
     name: microservicecloud-dept
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource #µ±Ç°Êı¾İÔ´²Ù×÷Àà
-    driver-class-name: com.mysql.jdbc.Driver  #mysqlÈ¥  com.mysql.jdbc.Driver  org.git.mm.mysql.Driver   ĞÂ°æ±¾com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatis01?useUnicode=true&characterEncoding=utf8&useSSL=false  #Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource #å½“å‰æ•°æ®æºæ“ä½œç±»
+    driver-class-name: com.mysql.jdbc.Driver  #mysqlå»  com.mysql.jdbc.Driver  org.git.mm.mysql.Driver   æ–°ç‰ˆæœ¬com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis01?useUnicode=true&characterEncoding=utf8&useSSL=false  #æ•°æ®åº“åç§°
     username: root
     password: 
     dbcp2:
-      min-idle: 5     #Êı¾İ¿âÁ¬½Ó³Ø×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5 #³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5    #×î´óÁ¬½ÓÊı
-      max-wait-millis: 200 #µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5     #æ•°æ®åº“è¿æ¥æ± æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5 #åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5    #æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200 #ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
   jackson:
     date-format: yyyy-MM-dd HH\:mm\:ss
 eureka:
@@ -41,21 +43,23 @@ eureka:
     instance-id: microservicecloud-dept8001
     prefer-ip-address: true
 ---
+server:
+  port: 8002 
 spring:
   profiles: dept-8002
   application:
     name: microservicecloud-dept
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource #µ±Ç°Êı¾İÔ´²Ù×÷Àà
-    driver-class-name: com.mysql.jdbc.Driver  #mysqlÈ¥  com.mysql.jdbc.Driver  org.git.mm.mysql.Driver   ĞÂ°æ±¾com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatis01?useUnicode=true&characterEncoding=utf8&useSSL=false  #Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource #å½“å‰æ•°æ®æºæ“ä½œç±»
+    driver-class-name: com.mysql.jdbc.Driver  #mysqlå»  com.mysql.jdbc.Driver  org.git.mm.mysql.Driver   æ–°ç‰ˆæœ¬com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis01?useUnicode=true&characterEncoding=utf8&useSSL=false  #æ•°æ®åº“åç§°
     username: root
     password: 
     dbcp2:
-      min-idle: 5     #Êı¾İ¿âÁ¬½Ó³Ø×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5 #³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5    #×î´óÁ¬½ÓÊı
-      max-wait-millis: 200 #µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5     #æ•°æ®åº“è¿æ¥æ± æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5 #åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5    #æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200 #ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
   jackson:
     date-format: yyyy-MM-dd HH\:mm\:ss
 eureka:
@@ -66,21 +70,23 @@ eureka:
     instance-id: microservicecloud-dept8002
     prefer-ip-address: true
 ---
+server:
+  port: 8003 
 spring:
   profiles: dept-8003
   application:
     name: microservicecloud-dept
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource #µ±Ç°Êı¾İÔ´²Ù×÷Àà
-    driver-class-name: com.mysql.jdbc.Driver  #mysqlÈ¥  com.mysql.jdbc.Driver  org.git.mm.mysql.Driver   ĞÂ°æ±¾com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatis01?useUnicode=true&characterEncoding=utf8&useSSL=false  #Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource #å½“å‰æ•°æ®æºæ“ä½œç±»
+    driver-class-name: com.mysql.jdbc.Driver  #mysqlå»  com.mysql.jdbc.Driver  org.git.mm.mysql.Driver   æ–°ç‰ˆæœ¬com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis01?useUnicode=true&characterEncoding=utf8&useSSL=false  #æ•°æ®åº“åç§°
     username: root
     password: 
     dbcp2:
-      min-idle: 5     #Êı¾İ¿âÁ¬½Ó³Ø×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5 #³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5    #×î´óÁ¬½ÓÊı
-      max-wait-millis: 200 #µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5     #æ•°æ®åº“è¿æ¥æ± æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5 #åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5    #æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200 #ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
   jackson:
     date-format: yyyy-MM-dd HH\:mm\:ss
 eureka:
@@ -97,10 +103,10 @@ server:
   port: 7001
 eureka: 
   instance:
-    hostname: eureka7001.com #eureka·şÎñ¶ËµÄÊµÀıÃû³Æ
+    hostname: eureka7001.com #eurekaæœåŠ¡ç«¯çš„å®ä¾‹åç§°
   client: 
-    register-with-eureka: false     #false±íÊ¾²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º¡£
-    fetch-registry: false     #false±íÊ¾×Ô¼º¶Ë¾ÍÊÇ×¢²áÖĞĞÄ£¬ÎÒµÄÖ°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı£¬²¢²»ĞèÒªÈ¥¼ìË÷·şÎñ
+    register-with-eureka: false     #falseè¡¨ç¤ºä¸å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±ã€‚
+    fetch-registry: false     #falseè¡¨ç¤ºè‡ªå·±ç«¯å°±æ˜¯æ³¨å†Œä¸­å¿ƒï¼Œæˆ‘çš„èŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ï¼Œå¹¶ä¸éœ€è¦å»æ£€ç´¢æœåŠ¡
     service-url: 
     defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
 ---
@@ -110,10 +116,10 @@ server:
   port: 7002
 eureka: 
   instance:
-    hostname: eureka7002.com #eureka·şÎñ¶ËµÄÊµÀıÃû³Æ
+    hostname: eureka7002.com #eurekaæœåŠ¡ç«¯çš„å®ä¾‹åç§°
   client: 
-    register-with-eureka: false     #false±íÊ¾²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º¡£
-    fetch-registry: false     #false±íÊ¾×Ô¼º¶Ë¾ÍÊÇ×¢²áÖĞĞÄ£¬ÎÒµÄÖ°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı£¬²¢²»ĞèÒªÈ¥¼ìË÷·şÎñ
+    register-with-eureka: false     #falseè¡¨ç¤ºä¸å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±ã€‚
+    fetch-registry: false     #falseè¡¨ç¤ºè‡ªå·±ç«¯å°±æ˜¯æ³¨å†Œä¸­å¿ƒï¼Œæˆ‘çš„èŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ï¼Œå¹¶ä¸éœ€è¦å»æ£€ç´¢æœåŠ¡
     service-url: 
     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/
 ---
@@ -123,9 +129,9 @@ server:
   port: 7003
 eureka: 
   instance:
-    hostname: eureka7003.com #eureka·şÎñ¶ËµÄÊµÀıÃû³Æ
+    hostname: eureka7003.com #eurekaæœåŠ¡ç«¯çš„å®ä¾‹åç§°
   client: 
-    register-with-eureka: false     #false±íÊ¾²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º¡£
-    fetch-registry: false     #false±íÊ¾×Ô¼º¶Ë¾ÍÊÇ×¢²áÖĞĞÄ£¬ÎÒµÄÖ°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı£¬²¢²»ĞèÒªÈ¥¼ìË÷·şÎñ
+    register-with-eureka: false     #falseè¡¨ç¤ºä¸å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±ã€‚
+    fetch-registry: false     #falseè¡¨ç¤ºè‡ªå·±ç«¯å°±æ˜¯æ³¨å†Œä¸­å¿ƒï¼Œæˆ‘çš„èŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ï¼Œå¹¶ä¸éœ€è¦å»æ£€ç´¢æœåŠ¡
     service-url: 
     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
